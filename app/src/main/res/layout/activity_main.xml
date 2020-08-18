@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <!--Views on Left Side-->
+    <TextView
+        android:id="@+id/base_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="48dp"
+        android:layout_marginTop="32dp"
+        android:text="Base"
+        android:textColor="@android:color/black"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/percent_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/base_text_view"
+        android:layout_alignLeft="@id/base_text_view"
+        android:layout_marginTop="32dp"
+        android:text="15%"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tip_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/percent_txt"
+        android:layout_alignLeft="@id/base_text_view"
+        android:layout_marginTop="48dp"
+        android:text="Tip"
+        android:textColor="@android:color/black"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/total_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tip_txt"
+        android:layout_alignLeft="@id/tip_txt"
+        android:layout_marginTop="32dp"
+        android:text="Total"
+        android:textColor="@android:color/black"
+        android:textSize="18sp" />
+
+    <!--Views on Right Side-->
+    <EditText
+        android:hint="₹"
+        android:id="@+id/base_edit_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/base_text_view"
+        android:layout_marginLeft="32dp"
+        android:layout_toRightOf="@id/base_text_view"
+        android:ems="8"
+        android:inputType="number"
+        android:textSize="24sp" />
+
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="200dp"
+        android:layout_height="20dp"
+        android:layout_alignLeft="@id/base_edit_text"
+        android:layout_alignTop="@id/percent_txt"
+        android:layout_alignBottom="@id/percent_txt"
+        android:max="30" />
+
+    <TextView
+        android:id="@+id/animation_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/seekBar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="30dp"
+        android:text="Acceptable"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/animation_txt"
+        android:layout_alignBaseline="@id/tip_txt"
+        android:layout_alignLeft="@id/base_edit_text"
+        android:text="0"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/total"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tip_txt"
+        android:layout_alignBaseline="@id/total_txt"
+        android:layout_alignLeft="@id/base_edit_text"
+        android:text="0"
+        android:textSize="20dp" />
+
+    <!--Footer-->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="32dp"
+        android:text="Made with ❤ by Sujeet Kumar Arya "
+        android:textAllCaps="true" />
+
+</RelativeLayout>
